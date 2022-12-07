@@ -20,7 +20,8 @@ return new class extends Migration
             $table->integer('stok');
             $table->integer('harga');
             $table->text('deskripsi');
-            $table->foreignId('category_id')->unique();
+            $table->foreignId('category_id');
+            $table->string('photo');
             $table->timestamps();
         });
     }

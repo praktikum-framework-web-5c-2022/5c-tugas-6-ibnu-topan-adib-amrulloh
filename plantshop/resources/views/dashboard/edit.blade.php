@@ -1,7 +1,8 @@
 @extends('layouts.index')
 @section('isi')
     <div class="col-md-6">
-        <form action="{{ route('tumbuhans.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('tumbuhans.update',['tumbuhan'=>$tumbuhan->id]) }}" method="POST" enctype="multipart/form-data">
+            @method('PATCH')
             @csrf
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama</label>

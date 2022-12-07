@@ -17,12 +17,13 @@ class TumbuhanFactory extends Factory
     public function definition()
     {
         return [
-            'nama' => fake()->sentence(),
-            'nama_ilmiah' => fake()->sentence(),
+            'nama' => fake()->words(1,true),
+            'nama_ilmiah' => fake()->words(2,true),
             'stok' => mt_rand(1,10),
             'harga' => fake()->randomNumber(5,true),
             'deskripsi' => fake()->paragraph(),
-            'category_id' => fake()->unique()->randomDigit()
+            'category_id' => fake()->unique()->randomDigit(),
+            'photo' => fake()->words(1,true)
         ];
     }
 }
