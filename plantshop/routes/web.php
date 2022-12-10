@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\TumbuhanController;
 use App\Models\Tumbuhan;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TumbuhanController;
+use App\Http\Controllers\TumbuhansController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard.index',[
-        'tumbuhans' => Tumbuhan::all()
-    ]);
-});
+Route::get('/', [TumbuhanController::class,'index']);
+
 
 Route::resource('/tumbuhans',TumbuhanController::class);
 

@@ -1,5 +1,8 @@
 @extends('layouts.index')
 @section('isi')
+    <div class="d-flex flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <a href="{{ route('tumbuhans.index') }}" class="btn btn-success">Kembali</a>
+    </div>
     <div class="col-md-6">
         <form action="{{ route('tumbuhans.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
